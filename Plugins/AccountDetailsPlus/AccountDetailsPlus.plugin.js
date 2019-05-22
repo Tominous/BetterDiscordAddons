@@ -1,4 +1,4 @@
-//META{"name":"AccountDetailsPlus","displayName":"AccountDetailsPlus","website":"https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/AccountDetailsPlus","source":"https://raw.githubusercontent.com/rauenzi/BetterDiscordAddons/master/Plugins/AccountDetailsPlus/AccountDetailsPlus.plugin.js"}*//
+//META{"name":"AccountDetailsPlus","displayName":"AccountDetailsPlus","website":"https://github.com/Tominous/BetterDiscordAddons/tree/master/Plugins/AccountDetailsPlus","source":"https://raw.githubusercontent.com/rauenzi/BetterDiscordAddons/master/Plugins/AccountDetailsPlus/AccountDetailsPlus.plugin.js"}*//
 /*@cc_on
 @if (@_jscript)
 	
@@ -62,7 +62,7 @@ var AccountDetailsPlus = (() => {
     return class AccountDetailsPlus extends Plugin {
         constructor() {
             super();
-            // this.usernameCSS = `.container-iksrDt .accountDetails-26T3kW { cursor: pointer; }`;
+             this.usernameCSS = `.container-iksrDt .accountDetails-26T3kW { cursor: pointer; }`;
             this.popoutOpen = false;
         }
 
@@ -154,7 +154,7 @@ var AccountDetailsPlus = (() => {
             e.preventDefault();
             e.stopPropagation();
             const element = document.querySelector(DiscordSelectors.AccountDetails.container);
-            // e.target = e.currentTarget = e.toElement = e.delegateTarget = document.querySelector(DiscordSelectors.AccountDetails.container);
+             e.target = e.currentTarget = e.toElement = e.delegateTarget = document.querySelector(DiscordSelectors.AccountDetails.container);
             this.setRender((props) => {
                 const guild = DiscordModules.SelectedGuildStore.getGuildId();
                 const channel = DiscordModules.SelectedChannelStore.getChannelId();
